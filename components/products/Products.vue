@@ -25,7 +25,7 @@
                   {{ product.title }}
                 </a>
               </h3>
-              <p class="text-base text-body-color leading-relaxed mb-7">
+              <p class="desc text-base text-body-color leading-relaxed mb-7">
                 {{ getLimitedDescription(product.description, 25) }}
               </p>
               <a
