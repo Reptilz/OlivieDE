@@ -6,11 +6,17 @@
     >
       <div class="flex items-center justify-between">
         <div>
-          <a
+          <nuxt-link
+            to="/"
             class="text-2xl font-bold text-gray-800 hover:text-gray-700 dark:text-white dark:hover:text-gray-300 lg:text-3xl"
             href="#"
-            >OlivieDE</a
           >
+            <img
+              width="200"
+              :src="`/_nuxt/assets/images/logoNatura.png`"
+              alt="logo"
+            />
+          </nuxt-link>
         </div>
       </div>
 
@@ -21,24 +27,21 @@
         <div
           class="lg:-px-8 flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0"
         >
-          <a
+          <nuxt-link
+            to="/"
             class="transform text-gray-700 transition-colors duration-300 hover:text-green-600 dark:text-gray-200 dark:hover:text-blue-400 lg:mx-8"
             href="#"
-            >Home</a
-          >
-          <a
-            class="transform text-gray-700 transition-colors duration-300 hover:text-green-600 dark:text-gray-200 dark:hover:text-blue-400 lg:mx-8"
-            href="#"
-            >About</a
+            >Startseite</nuxt-link
           >
         </div>
 
-        <a
+        <nuxt-link
+          to="/#products"
           class="mt-4 block rounded-lg bg-green-800 px-6 py-2.5 text-center font-medium capitalize leading-5 text-white hover:bg-green-700 lg:mt-0 lg:w-auto"
-          href="#"
+          href="#products"
         >
-          Show products
-        </a>
+          Produkte ansehen
+        </nuxt-link>
       </div>
     </nav>
   </section>

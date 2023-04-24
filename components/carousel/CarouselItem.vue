@@ -6,7 +6,7 @@
       @mouseenter="$emit('mouseenter')"
       @mouseout="$emit('mouseout')"
     >
-      <img :src="slide" />
+      <img :src="`/_nuxt/assets/images/olivie-slider.jpg`" />
     </div>
   </transition>
 </template>

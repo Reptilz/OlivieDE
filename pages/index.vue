@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <Carousel />
+    <Header />
     <Presentation />
     <Products />
   </div>

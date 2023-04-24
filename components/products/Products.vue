@@ -1,7 +1,7 @@
 <template>
   <!-- ====== Cards Section Start -->
-  <section class="pt-4 lg pb-10 lg:pb-20 bg-[#F3F4F6]">
-    <h4 class="text-3xl pt-4 pb-12 pl-8 font-bold">Liste des produits</h4>
+  <section id="products" class="pt-4 lg pb-10 lg:pb-20 bg-[#F3F4F6]">
+    <h4 class="text-3xl pt-4 pb-12 pl-8 font-bold">Liste von Produkten</h4>
     <div class="container">
       <div class="flex flex-wrap -mx-4">
         <div
@@ -13,7 +13,7 @@
             <img
               :src="`/_nuxt/assets/images/${product.image}`"
               :alt="product.image"
-              class="w-full"
+              class="w-full h-96"
             />
             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
               <h4 class="italic">{{ product.subtitle }}</h4>
@@ -26,13 +26,13 @@
                 </a>
               </h3>
               <p class="text-base text-body-color leading-relaxed mb-7">
-                {{ getLimitedDescription(product.description, 20) }}
+                {{ getLimitedDescription(product.description, 25) }}
               </p>
               <a
-                href="javascript:void(0)"
+                :href="product.link"
                 class="inline-block py-2 px-7 border border-[#E5E7EB] rounded-full text-base text-body-color font-medium hover:border-primary hover:bg-primary hover:text-gray-400 hover:border-gray-400 transition"
               >
-                Acheter
+                Siehe mehr
               </a>
             </div>
           </div>
@@ -50,43 +50,51 @@ export default {
     products: [
       {
         title: "OLIVIE PLUS 30X",
-        subtitle: "DÉGUSTEZ LA PUISSANCE VERTE",
+        subtitle: "KOSTEN SIE DIE GRÜNE MACHT",
         description:
-          "30 fois plus d’hydroxytyrosol, un puissant polyphénol. 30 fois plus efficace pour protéger votre cœur contre l’oxydation du cholestérol LDL (LDL-ox).",
-        image: "olivie_perles_nl.jpg",
-        link: "https://www.naturamedicatrix.fr/fr/",
+          "30-mal mehr Hydroxytyrosol, ein starkes Polyphenol. 30-mal wirksamer, um Ihr Herz vor der Oxidation von LDL-Cholesterin (LDL-ox) zu schützen.",
+        image: "Olivie_plus.jpg",
+        link: "https://www.naturamedicatrix.fr/de/ldl-oxydes/166-olivie-plus-30x-olivie-pharma.html",
       },
       {
         title: "OLIVIE PERLES D'OLIVIERS DU DÉSERT",
-        subtitle: "LE TOTUM DE L’OLIVIER SUBLIMÉ",
+        subtitle: "DAS GESAMTGEWICHT DES OLIVENBAUMS SUBLIMIERT",
         description:
-          "Perles d’oliviers du désert, concentré de puissance. OLIVIE PowerUp est un extrait d’oliviers du désert mélangé à de l’huile d’olive bio extra vierge. Les perles du désert sont riches en polyphénols et sont indiquées à la fois dans l’alimentation quotidienne et pour le traitement de la peau (corps et visage).",
+          "Perlen aus Wüstenolivenbäumen, geballte Kraft. OLIVIE PowerUp ist ein Extrakt aus Wüstenolivenbäumen, der mit nativem Bio-Olivenöl extra gemischt wird. Wüstenperlen sind reich an Polyphenolen und eignen sich sowohl für die tägliche Ernährung als auch für die Behandlung der Haut (Körper und Gesicht).",
         image: "olivie_perles_nl.jpg",
-        link: "https://www.naturamedicatrix.fr/fr/",
+        link: "https://www.naturamedicatrix.fr/de/stress-oxydant/339-olivie-caviar-powerup-olivie-pharma.html",
       },
       {
         title: "OLIVIE RICHE/FORCE",
-        subtitle: "VIVEZ L'ÉNERGIE VERTE",
+        subtitle: "LEBEN SIE MIT GRÜNER ENERGIE",
         description:
-          "Un complément alimentaire extrait de l’olivier, riche en puissants antioxydants regroupant de façon concentrée l’ensemble des bienfaits de l’huile d’olive et de l’olivier même. Un véritable totum de l’olivier.",
-        image: "olivie_perles_nl.jpg",
-        link: "https://www.naturamedicatrix.fr/fr/",
+          "Ein aus dem Olivenbaum extrahiertes Nahrungsergänzungsmittel, das reich an starken Antioxidantien ist und alle Vorteile des Olivenöls und des Olivenbaums selbst in konzentrierter Form vereint. Ein echtes Olivenbaum-Totum.",
+        image: "olivie_force.jpg",
+        link: "https://www.naturamedicatrix.fr/de/articulations/196-olivie-riche-olivie-pharma.html",
       },
       {
         title: "OLIVIE BEAUTY",
-        subtitle: "ILLUMINEZ LA BEAUTÉ",
+        subtitle: "ERLEUCHTEN SIE DIE SCHÖNHEIT",
         description:
-          "OLIVIE Beauty est une crème Bio pour le visage : éclaircissante, nourrissante, apaisante et anti tâches, pour un usage de nuit et de jour. Elle contient une concentration exceptionnelle de polyphénols ayant une puissance antioxydante inégalée.",
-        image: "olivie_perles_nl.jpg",
-        link: "https://www.naturamedicatrix.fr/fr/",
+          "OLIVIE Beauty ist eine Bio-Gesichtscreme: aufhellend, nährend, beruhigend und gegen Pigmentflecken, für die Anwendung über Nacht und am Tag. Sie enthält eine außergewöhnliche Konzentration an Polyphenolen mit einer unübertroffenen antioxidativen Kraft.",
+        image: "olivie_beauty.jpg",
+        link: "https://www.naturamedicatrix.fr/de/taches-de-senescence-vieillesse/186-olivie-beauty-olivie-pharma.html",
       },
       {
         title: "OLIVETTE",
-        subtitle: "OLIVETTE, C'EST VIVRE VERT !",
+        subtitle: "OLIVETTE IST GRÜNES LEBEN!",
         description:
-          "Olivette est une briquette innovante qui répond parfaitement aux exigences d'un style de vie contemporain. Des choix intelligents, un soin attentif à votre santé et le respect de l'environnement sont reflétés dans ces nouvelles et saines briquettes faites à 100% de matériaux recyclés. Branches provenant de la taille annuelle d'oliviers certifiés bio, noyaux d’olives et pulpe d'olive résultant du pressage d’huile. 100% écologique, sans produits chimiques. Voici la briquette dont vous aviez besoin!",
-        image: "olivie_perles_nl.jpg",
-        link: "https://www.naturamedicatrix.fr/fr/",
+          "Olivette ist ein innovatives Brikett, das den Anforderungen eines zeitgemäßen Lebensstils perfekt entspricht. Intelligente Entscheidungen, sorgfältige Pflege Ihrer Gesundheit und Respekt für die Umwelt spiegeln sich in diesen neuen, gesunden Briketts wider, die zu 100% aus recycelten Materialien hergestellt werden. Äste aus dem jährlichen Beschneiden von zertifizierten Bio-Olivenbäumen, Olivenkerne und Olivenpulpe aus der Ölpressung. 100% umweltfreundlich, ohne Chemikalien. Hier ist das Brikett, das Sie brauchen!",
+        image: "olivette.jpg",
+        link: "https://www.naturamedicatrix.fr/de/divers/558-olivette-briquette-de-charbon-bio-olivie-pharma.html",
+      },
+      {
+        title: "PACK OLIVIE",
+        subtitle: "ALL IN ONE",
+        description:
+          'Unsere "Wüsten-Olivenbaum-Perlen" werden in Form von Kaviar angeboten, dessen Perlen aus Olivenmark, Olivenöl, Olivenblättern und jungen Trieben der Blätter des Olivenbaums bestehen.',
+        image: "pack-olivie.jpg",
+        link: "https://www.naturamedicatrix.fr/de/articulations/341-pack-olivie-olivie-pharma.html",
       },
     ],
   }),
