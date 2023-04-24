@@ -16,7 +16,7 @@
               class="w-full"
             />
             <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
-              <h4>{{ product.subtitle }}</h4>
+              <h4 class="italic">{{ product.subtitle }}</h4>
               <h3>
                 <a
                   href="javascript:void(0)"
@@ -69,6 +69,22 @@ export default {
         subtitle: "VIVEZ L'ÉNERGIE VERTE",
         description:
           "Un complément alimentaire extrait de l’olivier, riche en puissants antioxydants regroupant de façon concentrée l’ensemble des bienfaits de l’huile d’olive et de l’olivier même. Un véritable totum de l’olivier.",
+        image: "olivie_perles_nl.jpg",
+        link: "https://www.naturamedicatrix.fr/fr/",
+      },
+      {
+        title: "OLIVIE BEAUTY",
+        subtitle: "ILLUMINEZ LA BEAUTÉ",
+        description:
+          "OLIVIE Beauty est une crème Bio pour le visage : éclaircissante, nourrissante, apaisante et anti tâches, pour un usage de nuit et de jour. Elle contient une concentration exceptionnelle de polyphénols ayant une puissance antioxydante inégalée.",
+        image: "olivie_perles_nl.jpg",
+        link: "https://www.naturamedicatrix.fr/fr/",
+      },
+      {
+        title: "OLIVETTE",
+        subtitle: "OLIVETTE, C'EST VIVRE VERT !",
+        description:
+          "Olivette est une briquette innovante qui répond parfaitement aux exigences d'un style de vie contemporain. Des choix intelligents, un soin attentif à votre santé et le respect de l'environnement sont reflétés dans ces nouvelles et saines briquettes faites à 100% de matériaux recyclés. Branches provenant de la taille annuelle d'oliviers certifiés bio, noyaux d’olives et pulpe d'olive résultant du pressage d’huile. 100% écologique, sans produits chimiques. Voici la briquette dont vous aviez besoin!",
         image: "olivie_perles_nl.jpg",
         link: "https://www.naturamedicatrix.fr/fr/",
       },
