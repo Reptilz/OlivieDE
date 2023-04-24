@@ -16,7 +16,7 @@
         @mouseenter="stopSlideTimer"
         @mouseout="startSlideTimer"
       />
-      <CarouselControls @prev="prev" @next="next" />
+      <!-- <CarouselControls @prev="prev" @next="next" /> -->
     </div>
   </div>
 </template>
