@@ -1,5 +1,6 @@
 import { resolve } from "path";
 
+
 export default defineNuxtConfig({
     alias: {
         "@": resolve(__dirname, "/"),
@@ -10,5 +11,5 @@ export default defineNuxtConfig({
             tailwindcss: {},
             autoprefixer: {},
         }
-    }
+    },
 })

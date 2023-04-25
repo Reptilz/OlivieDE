@@ -1,11 +1,11 @@
 <template>
   <div class="container py-16 mt-20 mb-32">
     <div class="mx-auto mx-20">
-      <h1 class="text-3xl font-bold text-gray-800 dark:text-white lg:text-4xl">
+      <h1 class="text-3xl font-bold text-gray-700">
         DIE EIGENTLICHE INNOVATION IM KAMPF GEGEN FREIE RADIKALE IST NATÜRLICH
         UND MEHRERE TAUSEND JAHRE ALT.
       </h1>
-      <p class="mt-6 text-gray-500 dark:text-gray-300">
+      <p class="mt-6 text-gray-500 text-xl">
         DIE EIGENTLICHE INNOVATION IM KAMPF GEGEN FREIE RADIKALE IST NATÜRLICH
         UND MEHRERE TAUSEND JAHRE ALT. Heute kann dank der OLIVIE-Linie jeder
         davon profitieren. Die medizinische und wissenschaftliche Forschung hat

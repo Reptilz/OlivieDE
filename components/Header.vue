@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <nuxt-link to="/#products">
+    <nuxt-link to="http://www.olivie.pro/">
       <img
         width="2000"
         :src="`/_nuxt/assets/images/olivie-slider.jpg`"
